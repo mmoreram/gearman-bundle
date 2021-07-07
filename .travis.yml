@@ -1,5 +1,8 @@
 sudo: required
 dist: trusty
+env:
+    global:
+        - XDEBUG_MODE=coverage
 
 language: php
 php:
@@ -9,6 +12,7 @@ php:
     - 7.1
     - 7.2
     - 7.3
+    - 7.4
 
 install:
   - sh -c "sudo apt-get -y install uuid-dev libgearman-dev gearman gearman-job-server"
